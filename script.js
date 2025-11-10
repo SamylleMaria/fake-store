@@ -19,7 +19,7 @@ function criarCards (data) {
         const cardBox = document.createElement('div')
         cardBox.className = "box"
 
-        const title = document.createElement('h1')
+        const title = document.createElement('h2')
         title.textContent = e.title 
 
         const img = document.createElement('img')
@@ -27,9 +27,10 @@ function criarCards (data) {
 
         const descri = document.createElement('p')
         descri.textContent = e.description
+        descri.className = "descri"
 
-        const price = document.createElement('p')
-        price.textContent = e.price
+        const price = document.createElement('p')  
+        descri.innerHTML =`R$ ${e.price}`
 
         cardBox.append(img, title, descri, price)
         cards.appendChild(cardBox)
